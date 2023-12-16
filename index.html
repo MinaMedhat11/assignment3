@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="Style/bootstrap.min.css">
+    <link rel="stylesheet" href="Style/all.min.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container text-center py-5">
+        <div class="heading">
+            <h1 class="hh1">Bookmarker</h1>
+        </div>
+        <div class="subheading">
+            <h2><i class="fa-solid fa-bookmark" style="color: #3ca55c;"></i> Bookmark your favorite sites <i
+                    class="fa-solid fa-bookmark" style="color: #b5ac49;"></i></h2>
+        </div>
+
+        <div class="form">
+            <div class="input1 ">
+                <h2 class="py-1 fw-bold ">Site Name</h2>
+                <input required id="siteName" type="text" class="form-control" placeholder="Bookmark Name">
+            </div>
+
+            <div class="input2">
+                <h2 class="py-1 fw-bold ">Site URL</h2>
+                <input required type="text" id="siteURL" class="form-control" placeholder="Website URL">
+            </div>
+            <button onclick="submitData()" id="submit" class="btn btn-danger my-3 px-5 fw-medium">Submit</button>
+        </div>
+
+        <table class="table text-center">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="dataTable">
+                <tr>
+                    <td class="mx-1">${i}</td>
+                    <td>${bookmarkList[i].WebsiteName}</td>
+                    <td><a><button class="btn btn-success">Visit</button></a></td>
+                    <td><button onclick="bookmarkDelete(${i})" class="btn btn-danger">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript/main.js"></script>
+</body>
+
+</html>
