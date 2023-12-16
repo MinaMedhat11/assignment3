@@ -3,10 +3,9 @@ var SiteURL=document.getElementById('siteURL')
 
 
 var bookmarkList=[]
-if(bookmarkList){
+if(localStorage.getItem('bookmark' != null)){
     bookmarkList=JSON.parse(localStorage.getItem('bookmark'))
     bookmarkDisplay()
-
 }
 function submitData() {
 
